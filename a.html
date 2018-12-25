@@ -1,0 +1,35 @@
+<html><head><title>...</title></head><body>
+<p>
+﻿Atox is a fully customizable tool for adding markup to plain text. The manual (pdf, source text) is available online, and the most recent version of the software can be downloaded from the SourceForge project page. Even more updated, and probably less stable, code can be found in the CVS repository. There is also a mailing list for discussing Atox.
+</p>
+<p>
+What's going on? [2005-05-31] I'm working on a new version of Atox, with a completely new (filter-based) architecture, which is much more modular and extensible. This new version will also be able to work with partial XML documents (even ill-formed ones) so you can mix Atox and other tools in a UNIX pipe. The main architecture (including parsing potentially ill-formed XML and outputting transformed XML) and a couple of core component (one for "chinking" or splitting text into block-level elements, with all kinds of interactions with the XML, and one for "fixing" XML so that it conforms to a certain schema-like structure) are in place.
+</p>
+<p>
+Before the system is going to be of much use, I plan to implement at least a couple of other components (one for renaming elements based on their textual contents, and one for looking for features, similar to the core functionality of the previous Atox). The code is in quite a raw state, and I probably won't be releasing it for quite some time (if I manage to finish it at all). Also, it will not be backward-compatible, although I may add some code to make it work with the old format-language. Anyone interested in the code could email me to receive a snapshot. (The code hasn't been checked into SourceForge CVS yet.)
+</p>
+<p>
+Latest release: Version 0.5, on Apr 24, 2004. See the manual for revision history.
+</p>
+<p>
+A prototype that uses Flex and Bison to do the parsing is available. Note that it is just an experiment and may never be used as part of Atox. You can download it here.
+</p>
+<p>
+Current status: Atox is still experimental and may yet undergo changes that are not backward compatible. Version 0.5 is, however, a rather complete implementation of the main ideas behind the project. It is quite possible that, save the odd bug fix, no great changes (or much development) will occur in the near future. (You never know, of course... And you never know when the complete rewrite will be done...)
+</p>
+<p>
+If you need a more mature and actively supported solution for converting text documents into XML (or something else) you could also consider the various technologies mentioned in the manual, such as reStructuredText or AsciiDoc.
+</p>
+<p>
+If you'd like to write a custom markup parser, SimpleParse might be a useful too. (Davit Mertz has written an article about using it for markup parsing.)
+</p>
+<p>
+Martel is a parser generator that uses mxTextTools and uses SAX as a callback API. This could be useful in converting plain text into XML. And then there is always good old sed.
+</p>
+<p>
+Small print: Atox comes with no warranty of any kind. There is no guarantee of continued support. What you see is what you get.
+</p>
+<h2>
+:Python Foundry
+</h2>
+</body></html>
